@@ -2,7 +2,7 @@ import {Navbar, Container, Nav,NavDropdown} from "react-bootstrap"
 
 
 
-function NavBar() {
+function NavBar({homee}) {
   return (
     <Navbar expand="lg" className="bg-warning fixed-top">
       <Container>
@@ -10,8 +10,9 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#home">{!homee ? 'Abour' : homee }</Nav.Link>
             <Nav.Link href="#link">About</Nav.Link>
+            <Nav.Link href="#link">fff</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">

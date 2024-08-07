@@ -3,32 +3,28 @@ import { Routes, Route } from "react-router-dom"
 import Navbar from './components/NavBar'
 import Footer from './components/FooterComponent'
 import ButtonXs from './components/ButtonXs'
+import { useState } from 'react'
 
 
 function App() {
-  const navtext = "M Muhgni"
-  const header = "spuerpmen"
 
+  const [getNavbarValue, setGetNavbarValue] = useState("");
+  const [home, setHome] = useState('')
 
-  const clickked = () => {
-    alert('Semangat Belajar Muguhni')
-  }
+  const homee = () => {
+    setHome('Me Contact');
+  };
 
-
-  const paragraf = () => { return <h1>Mughni</h1> }
-
-  const kalimat = () => {
-    return (
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quibusdam dicta beatae eos consectetur optio, aut unde, atque exercitationem quo distinctio consequuntur quidem libero nam explicabo rerum. Natus, itaque neque.</p>
-    )
-  }
+  const changeNavbarValue = () => {
+    setGetNavbarValue("semangat  terus mughni ")
+  };
 
   return (
     <>
-      <Navbar name="muhgni" />
+      <Navbar name="muhgni" homee={home}  />
       <h1 className='fw-bold  text-center mt-5 pt-5 text-warning '>Nama Saya Mughni</h1>
-      <ButtonXs clickked={clickked}  kalimat={kalimat} />
-      <Footer name={navtext} kepala={header} paragraf={paragraf} />
+      <ButtonXs  cc={homee} />
+      {/* <Footer name={navtext} kepala={header} paragraf={paragraf} /> */}
     </>
   )
 }
