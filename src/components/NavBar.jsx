@@ -6,7 +6,7 @@ function NavBar({homee}) {
   return (
     <Navbar expand="lg" className="bg-warning fixed-top">
       <Container>
-        <Navbar.Brand href="#home">Mughni</Navbar.Brand>
+        <Navbar.Brand href="#home" className="fw-bold"><i>MUGHNI</i></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
